@@ -160,7 +160,7 @@ main.Button({
 local Players = game:GetService("Players")
 
 -- Adjust the teleport destination CFrame
-local teleportCFrame = CFrame.new(Vector3.new(537.080322, 618.574097, -449.980286, 0.280030906, -9.34190538e-08, -0.959990978, 1.58418842e-08, 1, -9.26913302e-08, 0.959990978, 1.07483711e-08, 0.280030906), Vector3.new(0, 0, 0))
+local teleportCFrame = CFrame.new(Vector3.new(448.051056, 618.574036, -395.291931, -0.0275750682, 6.72243416e-08, 0.999619722, 3.87118293e-09, 1, -6.71431266e-08, -0.999619722, 2.01823447e-09, -0.0275750682), Vector3.new(0, 0, 0))
 
 local function onHealthChanged(newHealth)
     local player = game.Players.LocalPlayer
