@@ -197,7 +197,7 @@ local teleportCFrame = CFrame.new(Vector3.new(448.051056, 618.574036, -395.29193
 local function onHealthChanged(newHealth)
     local player = game.Players.LocalPlayer
 
-    if newHealth <= 5 then
+    if newHealth <= 15 then
         -- Teleport the player to the specified CFrame
         player.Character:SetPrimaryPartCFrame(teleportCFrame)
     end
