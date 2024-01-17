@@ -81,12 +81,34 @@ local char_root = char:FindFirstChild("HumanoidRootPart")
     if target_root and target_hum then
         nearest_hum = math.huge
 
-        local behind = (target_root.CFrame *  CFrame.new(0,7,0)).p -- the behind lol
+        local behind = (target_root.CFrame *  CFrame.new(0,5,2)).p -- the behind lol
 
         char_root.CFrame = CFrame.new(behind)
 
         target_hum:TakeDamage()
     end
+spawn function()
+local args = {
+    [1] = {
+        ["Goal"] = "LeftClick"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
+end)
+wait(0.1)
+spawn(function()
+
+local args = {
+    [1] = {
+        ["Goal"] = "LeftClick",
+        ["Mobile"] = true
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
+
+end)
 end)
 end
 
@@ -151,6 +173,28 @@ local char_root = char:FindFirstChild("HumanoidRootPart")
 
         target_hum:TakeDamage()
     end
+spawn function()
+local args = {
+    [1] = {
+        ["Goal"] = "LeftClick"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
+end)
+wait(0.1)
+spawn(function()
+
+local args = {
+    [1] = {
+        ["Goal"] = "LeftClick",
+        ["Mobile"] = true
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
+
+end)
 end)
 end
 
@@ -667,7 +711,7 @@ UIS.InputBegan:Connect(function(Input, IsTyping)
 if IsTyping then return end
 local KeyPressed = Input.KeyCode
 if KeyPressed == Enum.KeyCode[Key] then
-	 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(537.080322, 618.574097, -449.980286, 0.280030906, -9.34190538e-08, -0.959990978, 1.58418842e-08, 1, -9.26913302e-08, 0.959990978, 1.07483711e-08, 0.280030906)
+	 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(513.357056, 616.573975, -507.688232, 0.325656146, -7.5960628e-08, -0.945488274, 1.037765e-07, 1, -4.45961845e-08, 0.945488274, -8.359644e-08, 0.325656146)
 end	  
 end)
 spawn(function()
@@ -1110,11 +1154,12 @@ end)
 })
 
 t.Toggle({
-	Text = "Auto Attack",
+	Text = "Auto Attack (Works On Mobile)",
 		Callback = function(Value)
 		     a = Value
         while a do task.wait()
         pcall(function()
+spawn function()
 local args = {
     [1] = {
         ["Goal"] = "LeftClick"
@@ -1122,7 +1167,20 @@ local args = {
 }
 
 game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
+end)
+wait(0.1)
+spawn(function()
 
+local args = {
+    [1] = {
+        ["Goal"] = "LeftClick",
+        ["Mobile"] = true
+    }
+}
+
+game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
+
+end)
         end)
              end
 	end,
