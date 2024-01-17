@@ -35,6 +35,7 @@ main.Toggle({
      a = Value
         while a do task.wait()
         pcall(function()
+spawn(function()
 local player = game.Players.LocalPlayer
 
 
@@ -87,16 +88,8 @@ local char_root = char:FindFirstChild("HumanoidRootPart")
 
         target_hum:TakeDamage()
     end
-spawn function()
-local args = {
-    [1] = {
-        ["Goal"] = "LeftClick"
-    }
-}
-
-game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
 end)
-wait(0.1)
+
 spawn(function()
 
 local args = {
@@ -107,7 +100,6 @@ local args = {
 }
 
 game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
-
 end)
 end)
 end
@@ -121,6 +113,7 @@ main.Toggle({
      a = Value
         while a do task.wait()
         pcall(function()
+spawn(function()
 local player = game.Players.LocalPlayer
 
 
@@ -173,16 +166,8 @@ local char_root = char:FindFirstChild("HumanoidRootPart")
 
         target_hum:TakeDamage()
     end
-spawn function()
-local args = {
-    [1] = {
-        ["Goal"] = "LeftClick"
-    }
-}
-
-game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
 end)
-wait(0.1)
+
 spawn(function()
 
 local args = {
@@ -193,7 +178,6 @@ local args = {
 }
 
 game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
-
 end)
 end)
 end
@@ -1153,24 +1137,15 @@ end)
 	Enabled = false
 })
 
+
+
+
 t.Toggle({
-	Text = "Auto Attack (Works On Mobile)",
+	Text = "Auto Attack",
 		Callback = function(Value)
 		     a = Value
-        while a do task.wait()
+        while a do task.wait(1)
         pcall(function()
-spawn function()
-local args = {
-    [1] = {
-        ["Goal"] = "LeftClick"
-    }
-}
-
-game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
-end)
-wait(0.1)
-spawn(function()
-
 local args = {
     [1] = {
         ["Goal"] = "LeftClick",
@@ -1180,14 +1155,11 @@ local args = {
 
 game:GetService("Players").LocalPlayer.Character.Communicate:FireServer(unpack(args))
 
-end)
-        end)
+  end)
              end
 	end,
 	Enabled = false
 })
-
-
 
 t.Toggle({
 	Text = "Auto Ground Smash",
