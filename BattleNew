@@ -421,7 +421,8 @@ main.Toggle({
  spawn(function()
 local args = {
     [1] = {
-        ["Goal"] = "LeftClick"
+        ["Goal"] = "LeftClick",
+        ["Mobile"] = true
     }
 }
 
