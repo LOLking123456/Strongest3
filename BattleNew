@@ -23,7 +23,11 @@ local X = Material.Load({
 	
 local main = X.New({Title = "Main-Features"})
 
+main.Button({
+	Text = "Unlock Gamepass Player",
+	Callback = function()
 
+end})
 main.Toggle({
     Text = "Auto Farm (Above/Nearest Player)",
     Enabled = false,
@@ -165,7 +169,7 @@ local teleportCFrame = CFrame.new(Vector3.new(448.051056, 618.574036, -395.29193
 local function onHealthChanged(newHealth)
     local player = game.Players.LocalPlayer
 
-    if newHealth <= 25 then
+    if newHealth <= 5 then
         -- Teleport the player to the specified CFrame
         player.Character:SetPrimaryPartCFrame(teleportCFrame)
     end
